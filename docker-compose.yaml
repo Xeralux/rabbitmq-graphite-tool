@@ -1,0 +1,9 @@
+version: "3.1"
+services:
+  rabbitmq_graphite:
+    build: .
+    image: netsense/rabbitmq_graphite
+    container_name: rabbitmq_graphite
+    volumes:
+      - ./rabbitmq_graphite-tool/docker/rabbitmqgraphite.log:/var/log/rabbitmq_graphite/rabbitmqgraphite.log
+      - $HOME/.ssh/id_rsa.key:/root/.ssh/id_rsa.key
