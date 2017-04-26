@@ -1,15 +1,14 @@
 # —————————————————————————————————————————————————————--
-# Sensity: northbound-simulator, Scala and SBT Docker-file
+# RabbitMQ-Graphite-Tool, Golang Docker-file
 # ————————————————————————————————————————————————————---
 
 #Fetch the latest ubuntu  from the docker registry
 FROM ubuntu
 
-FROM golang:latest
+FROM golang:1.8.1
 RUN mkdir /app
 ADD . /app/
 WORKDIR /app
 RUN make depends
 RUN go build -o main .
-#RUN make
 CMD ["/app/main"]
