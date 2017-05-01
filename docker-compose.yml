@@ -1,0 +1,12 @@
+version: "2"
+services:
+  rabbitmq_graphite:
+    build: ./
+    environment:
+     - RABBITMQ_HOST=68.128.161.9
+     - RABBITMQ_PORT=5672
+     - RABBITMQ_MGMT_PORT=15672
+     - RABBITMQ_USERNAME=farallones
+     - RABBITMQ_PASSWORD=sensity1
+     - GRAPHITE_HOST=68.128.161.9
+     - GRAPHITE_PORT=80
